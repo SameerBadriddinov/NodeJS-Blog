@@ -22,7 +22,7 @@ const storePostMiddleware = require("./middleware/storePost");
 const authMiddleware = require("./middleware/auth");
 const redirectIfAuth = require("./middleware/redirect");
 
-const MongoUrl = "mongodb+srv://samar:zozmS9hwVNIpdsGr@cluster0.bbfkm.mongodb.net/node-blog"
+const MongoUrl = process.env.MongoUrl
 
 mongoose.connect(MongoUrl);
 
