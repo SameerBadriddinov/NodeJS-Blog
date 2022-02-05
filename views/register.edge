@@ -1,0 +1,47 @@
+@layout('layouts.app')
+
+@section("content")
+<header class="masthead" style="background-image: url('/assets/img/post-bg.jpg')">
+  <div class="container position-relative px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-7">
+              <div class="page-heading">
+                  <h1>Register</h1>
+                  <span class="subheading">After register you can create any post...</span>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      @if(errors.length > 0)
+        <ul class="list-group my-3">
+          @each(err in errors)
+            <li class="list-group-item text-danger">{{err}}</li>
+          @endeach
+        </ul>
+      @endif
+      <form action="/auth/reg" method="POST">
+        <div class="form-floating">
+          <input type="text" class="form-control" value="{{data.username || ''}}" name="username" placeholder="Enter Your Name...">
+          <label>Username</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" class="form-control" value="{{data.email || ''}}" name="email" placeholder="Enter Your Email...">
+          <label>Email</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" value="{{data.password || ''}}" name="password" placeholder="Enter Your Password...">
+          <label>Password</label>
+        </div>
+        <div class="form-group text-center my-4">
+          <button class="btn btn-primary">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+@endsection

@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Samar Badriddinov",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "edge.js": "^5.3.2",
+    "express": "^4.17.1",
+    "express-edge": "^2.0.2",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "mongoose": "^6.0.13"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
